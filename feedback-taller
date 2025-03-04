@@ -1,0 +1,19 @@
+PUNTO 1: Con observación
+
+Error en el uso de filter()
+La función filter() no se está aplicando correctamente porque falta la conversión a una lista o iteración sobre el resultado. Además se está imprimiendo sin sentido alguno dentro de la función.
+
+PUNTO 2: Con observación
+
+Se sobrescribe resultado sin convertir el primer map() a una lista, lo que puede generar un comportamiento inesperado.
+
+Correción:
+numeros = [2, 4, 13, 9, 15]
+cuadrados = list(map(lambda n: n ** 2, numeros))
+mayores_50 = list(filter(lambda n: n > 50, cuadrados))
+
+print(mayores_50)
+
+PUNTO 3: No se evidencia
+
+NOTA: 2.0
